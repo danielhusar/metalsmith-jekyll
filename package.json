@@ -1,0 +1,26 @@
+{
+  "name": "metalsmith-jekyll",
+  "repository": "danielhusar/metalsmith-jekyll",
+  "dependencies": {
+    "metalsmith": "^1.0.0",
+    "metalsmith-assets": "^0.1.0",
+    "metalsmith-autoprefixer": "^1.0.0",
+    "metalsmith-collections": "^0.7.0",
+    "metalsmith-drafts": "0.0.1",
+    "metalsmith-excerpts": "^1.0.0",
+    "metalsmith-feed": "0.0.6",
+    "metalsmith-imagemin": "^1.0.0",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-pagination": "^1.1.1",
+    "metalsmith-permalinks": "^0.4.0",
+    "metalsmith-sass": "^1.2.1",
+    "metalsmith-templates": "^0.7.0",
+    "metalsmith-uglify": "^1.0.1",
+    "mocha": "*",
+    "swig": "^1.4.2"
+  },
+  "scripts": {
+    "build": "node build",
+    "test": "node node_modules/mocha/bin/mocha"
+  }
+}

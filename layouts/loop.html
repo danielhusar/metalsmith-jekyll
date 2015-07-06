@@ -1,0 +1,18 @@
+{% extends '_layout.html' %}
+
+{% block content %}
+
+  {% for file in pagination.files %}
+    {{file.excerpt | safe }}
+  {% endfor %}
+
+  {% if pagination.previous.path %}
+  	<strong>Next page link:</strong> <a href="/{{ pagination.previous.path }}">previous</a> <br>
+  {% endif %}
+  <strog>Pane number:</strog> {{ pagination.num }} <br>
+  {% if pagination.next.path %}
+  	<strong>Next page link:</strong> <a href="/{{ pagination.next.path }}">next</a> <br>
+  {% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends '_layout.html' %}
+
+{% block content %}
+
+  <time>{{ date | date('d. m. Y') }}</time>
+  {{ contents | safe }}
+
+{% endblock %}
