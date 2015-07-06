@@ -1,18 +1,9 @@
 'use strict';
 
-var assert = require('assert');
 var fs = require('fs')
-var build = require('../metalsmith.js');
-
+var assert = require('assert');
 
 describe('Site generation works', function () {
-  it('It should not throw error when generating site', function (cb) {
-    build(function (err) {
-      assert.equal(err, null);
-      cb();
-    });
-  });
-
   it('It should generate index', function (cb) {
     fs.exists('_build/index.html', function (exists) {
       assert(exists);
@@ -35,10 +26,10 @@ describe('Site generation works', function () {
   });
 
   it('It should generate pagination', function (cb) {
-    fs.readdir('_build/archive', function (err, files) {
+    fs.readdir('posts', function (err, files) {
       assert.equal(err, null);
 
-      fs.exists('_build/archive/' + files.length / 2 + '/index.html', function (exists) {
+      fs.exists('_build/archive/' + Math.ceil(files.length / 2) + '/index.html', function (exists) {
         assert(exists);
         cb();
       });

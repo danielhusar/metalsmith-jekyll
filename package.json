@@ -21,6 +21,6 @@
   },
   "scripts": {
     "build": "node build",
-    "test": "node node_modules/mocha/bin/mocha"
+    "test": "node build && node_modules/mocha/bin/mocha"
   }
 }

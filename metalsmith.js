@@ -19,7 +19,7 @@ var imagemin     = require('metalsmith-imagemin');
 
 
 function build (cb) {
-  metalsmith(__dirname)
+  return metalsmith(__dirname)
     // core
     .source('posts')
     .destination('_build')
